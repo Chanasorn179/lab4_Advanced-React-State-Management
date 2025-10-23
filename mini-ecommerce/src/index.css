@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==== Light Pastel Theme v2 ==== */
+@layer base {
+
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    @apply text-slate-700 bg-white;
+    background-image:
+      radial-gradient(1200px 600px at -10% -10%, rgba(125, 211, 252, 0.18), transparent 60%),
+      radial-gradient(1000px 500px at 120% 10%, rgba(196, 181, 253, 0.16), transparent 60%),
+      radial-gradient(900px 600px at 50% 120%, rgba(167, 243, 208, 0.14), transparent 60%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  a {
+    @apply underline-offset-2 text-sky-600 font-medium transition-colors;
+  }
+
+  a:hover {
+    @apply text-indigo-500 underline;
+  }
+}
+
+/* ปุ่มสไตล์พาสเทล */
+@layer components {
+  .btn-pastel {
+    @apply bg-gradient-to-r from-sky-200 via-indigo-200 to-green-200 text-slate-700 font-semibold px-6 py-3 rounded-full shadow-sm hover:shadow-md transition-all;
+  }
+
+  .btn-pastel:hover {
+    @apply scale-105;
+  }
+
+  .card-soft {
+    @apply bg-white/60 backdrop-blur-lg rounded-2xl p-8 shadow-md hover:shadow-xl transition-all;
+  }
+
+  .hero-title {
+    @apply text-4xl font-bold text-slate-800 mb-4;
+  }
+
+  .hero-text {
+    @apply text-lg text-slate-600 mb-6;
+  }
+}
